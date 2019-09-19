@@ -2,7 +2,7 @@
 % Please edit documentation in R/mapbox_styles.R
 \name{mapbox_style}
 \alias{mapbox_style}
-\title{mapbox_style}
+\title{Mapbox Style}
 \usage{
 mapbox_style(x = 1, owner = NULL, styleid = NULL, print = FALSE,
   optimized = FALSE)

@@ -20,7 +20,7 @@
 #'
 #' @details
 #' The \code{options} argument in the example contains 3 options, which are actually not options, but rather
-#' plugins or additional layers, which can be included.
+#' plugins or additional layers.
 #'
 #' \itemize{
 #'   \item{buildings}
@@ -160,6 +160,28 @@ mapboxDependency <- function(control) {
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name mapbox-shiny
+#'
+#' @examples
+#' \donttest{
+#' library(mapbox)
+#' library(shiny)
+#'
+#' token <- "MAPBOX_TOKEN"
+#'
+#' ui <- fluidPage(
+#'   mapbox::mapboxOutput("map", height = "800px")
+#' )
+#'
+#' server <- function(input, output, session) {
+#'   output$map <- mapbox::renderMapbox({
+#'     mapbox(token = token, zoom = 10,
+#'            location = c(-74.5447, 40.6892),
+#'            style = mapbox_style(2),
+#'            pitch = 20)
+#'   })
+#' }
+#' shinyApp(ui, server)
+#' }
 #'
 #' @export
 mapboxOutput <- function(outputId, width = '100%', height = '400px'){

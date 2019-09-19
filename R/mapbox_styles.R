@@ -1,4 +1,4 @@
-#' mapbox_style
+#' Mapbox Style
 #'
 #' Get a predefined or custom-made Mapbox style
 #'
@@ -9,7 +9,8 @@
 #' @param optimized If TRUE will append `?optimize=true` at the end of the
 #' style URL. Default is FALSE
 #'
-#' @examples \donttest{
+#' @examples
+#' \donttest{
 #' mapbox_style(print = TRUE)
 #' mapbox_style(4)
 #' mapbox_style(owner = "user", styleid = "style_id")

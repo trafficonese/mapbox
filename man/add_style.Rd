@@ -6,6 +6,22 @@
 \usage{
 add_style(map, style)
 }
+\arguments{
+\item{map}{A map widget object}
+
+\item{style}{The style to add}
+}
 \description{
 Add Style
+}
+\examples{
+\donttest{
+token <- "MAPBOX_TOKEN"
+
+mapbox(token = token) \%>\%
+  add_style(style = mapbox_style(5))
+}
+}
+\seealso{
+\code{\link{mapbox_style}}
 }

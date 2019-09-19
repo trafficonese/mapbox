@@ -56,7 +56,7 @@ add_source <- function(map, id = NULL, js) {
 #' mapbox(
 #'   token = token
 #'   , location = c(144.96, -37.82)
-#'   , zoom = 15
+#'   , zoom = 16
 #'   , pitch = 45
 #' ) %>%
 #'   add_layer( js )
@@ -81,7 +81,7 @@ add_source <- function(map, id = NULL, js) {
 #'     , js = source
 #'   ) %>%
 #'   add_layer(
-#'     js = contours
+#'     js = js
 #'   )
 #'
 #' }
@@ -111,6 +111,8 @@ clear_layer <- function(map, layer ) {
 }
 
 
+#' 3D-Building JSON
+#'
 #' @export
 mapbox_3d_buildings <- '{"id": "3d-buildings",
 "source": "composite",
@@ -133,6 +135,8 @@ mapbox_3d_buildings <- '{"id": "3d-buildings",
 	"fill-extrusion-opacity": 0.6
 }}'
 
+#' Terrain JSON
+#'
 #' @export
 mapbox_terrain <- '{"id": "terrain-data",
 	"type": "line",
@@ -150,6 +154,8 @@ mapbox_terrain <- '{"id": "terrain-data",
 		"line-width": 1
 	}}'
 
+#' Contours JSON
+#'
 #' @export
 mapbox_contours <- '{
 	"id": "contours",

@@ -28,3 +28,26 @@ is useful if you want to save an expression in a variable.}
 Output and render functions for using mapbox within Shiny
 applications and interactive Rmd documents.
 }
+\examples{
+\donttest{
+library(mapbox)
+library(shiny)
+
+token <- "MAPBOX_TOKEN"
+
+ui <- fluidPage(
+  mapbox::mapboxOutput("map", height = "800px")
+)
+
+server <- function(input, output, session) {
+  output$map <- mapbox::renderMapbox({
+    mapbox(token = token, zoom = 10,
+           location = c(-74.5447, 40.6892),
+           style = mapbox_style(2),
+           pitch = 20)
+  })
+}
+shinyApp(ui, server)
+}
+
+}

@@ -40,7 +40,7 @@ Plots a Mapbox GL JS map
 }
 \details{
 The \code{options} argument in the example contains 3 options, which are actually not options, but rather
-plugins or additional layers, which can be included.
+plugins or additional layers.
 
 \itemize{
   \item{buildings}
