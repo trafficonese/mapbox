@@ -6,11 +6,6 @@
 \usage{
 add_layer(map, js)
 }
-\arguments{
-\item{map}{A map widget object}
-
-\item{js}{The JSON used to create the layer}
-}
 \description{
 Add layer
 }
@@ -40,7 +35,7 @@ mapbox(
   , location = c(-122.44, 37.753)
   , zoom = 10
 ) \%>\%
-  add_layer( js )
+  add_mapbox_layer( js )
 
 ## 3-D buildings in New York, USA
 
@@ -71,7 +66,7 @@ mapbox(
   , zoom = 15
   , pitch = 45
 ) \%>\%
-  add_layer( js )
+  add_mapbox_layer( js )
 
 ## Terain in Cusco, Peru
 source <- '{
